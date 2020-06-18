@@ -25,6 +25,10 @@ string login () {
       int pos = line.find(":");
       if(username == line.substr(0,pos)){
         isuser = 1;
+        if(username == "admin"){
+          admin();
+          return admin;
+        }
         if(password == line.substr(pos+1)){
           cout << "Successful" << endl;
         }

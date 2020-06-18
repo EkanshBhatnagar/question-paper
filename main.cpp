@@ -6,8 +6,24 @@
 using namespace std;
 
 int main(){
+  start:
   cout << "Welcome to the Question Paper Generator CLI" << endl;
   string s = login();
+  if(s == "admin"){
+    cout << "Do you want to continue?(Yes(y)/No(n)):";
+    char choice;
+    cin >> choice;
+    if(choice == 'y'){
+      goto start;
+    } else if(choice == 'n'){
+      cout << "Exiting" << endl;
+      return 0;
+    } else {
+      cout << "Invalid Choice" << endl;
+      cout << "Exiting anyway" << endl;
+      return 0;
+    }
+  }
   cout<<"Hello "<<s<<"! Enter The Standard For Which You Want To Create Paper For! :"<<endl;
   int Standard;
   cin>>Standard;
