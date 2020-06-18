@@ -21,7 +21,7 @@ string login () {
     if(password == "adminpass"){
       return "admin";
     } else {
-      cout << "Invalid usename or password." << endl;
+      cout << "Invalid username or password." << endl;
       cout << "Closing Program" << endl;
       return "-1";
     }
@@ -48,6 +48,7 @@ string login () {
   else cout << "Unable to open file";
   if(!isuser){
     cout << "This user doesn't exists" << endl;
+    return "-1";
   }
   return username;
 }

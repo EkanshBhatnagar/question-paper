@@ -1,2 +1,1 @@
-ekansh123:kansh
-ekansh:password123
+ekansh2:password

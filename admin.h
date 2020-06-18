@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-
+#include <stdio.h>
 #include <string>
 using namespace std;
 
@@ -62,5 +62,42 @@ void admin(){
     myfile << newUser<< ":" << newPass<<"\n";
     myfile.close();
 
+  } else if (choice == 'D') {
+    cout << "You are deleting a user." << endl;
+    cout << "The list of users are:";
+    int count = 1;
+    string line,deleteUser;
+    ifstream myfile ("login_pass.txt");
+    if (myfile.is_open())
+    {
+      while ( getline (myfile,line) )
+      {
+        int pos = line.find(":");
+        cout << count << ". " << line.substr(0,pos) << endl;
+        count++;
+      }
+    }
+    myfile.close();
+    cout << "Choose the username of user to delete:";
+    cin >> deleteUser;
+    ofstream out;
+    out.open("temp.txt");
+    myfile.open("login_pass.txt");
+    if (myfile.is_open())
+    {
+      while ( getline (myfile,line) )
+      {
+        int pos = line.find(":");
+        if(deleteUser != line.substr(0,pos)){
+          out << line;
+        }
+    }
+    }
+    out.close();
+    myfile.close();
+    remove("login_pass.txt");
+    rename("temp.txt","login_pass.txt");
+    cout << "Changes successfully made." << endl;
   }
+
 }
