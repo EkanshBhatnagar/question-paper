@@ -2,8 +2,10 @@
 #include <bits/stdc++.h>
 #include <algorithm>
 #include <string.h>
-// #include "login.h"
+#include "isEqual.h"
+
 using namespace std;
+
 
 int main(){
   cout << "Welcome to the Question Paper Generator CLI" << endl;
@@ -11,6 +13,7 @@ int main(){
   cout<<"Hello "<<s<<"!Enter The Standard For Which You Want To Create Paper For!"<<endl;
   int Standard;
   cin>>Standard;
+
   if(Standard>12){
     cout<<"Oops! Standard Can Only be in between 1 to 12"<<endl;
     cout<<"Enter Standard Again!"<<" Do It Carefully As It Is Your Last Attempt.We Will Log You Out!"<<endl;
@@ -30,6 +33,14 @@ int main(){
     cin>>total_questions;
     cout<<"Enter Number Of Small Question"<<endl;
     cin>>small_questions;
+    cout<<"Enter Number Of Medium Questions!"<<endl;
+    cin>>medium_questions;
+    cout<<"Enter Number Of Large Questions!"<<endl;
+    cin>>large_questions;
+    if(isEqual(total_questions,small_questions,medium_questions,large_questions)){
+
+    } 
+    
 
   }
   
