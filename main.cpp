@@ -1,15 +1,22 @@
 #include <iostream>
 #include "login.h"
+#include "admin.h"
+#include "isEqual.h"
 #include <bits/stdc++.h>
 #include <algorithm>
 #include <string.h>
 using namespace std;
 
 int main(){
-  start:
+
   cout << "Welcome to the Question Paper Generator CLI" << endl;
+  start:
   string s = login();
+  if(s == "-1"){
+    return 0;
+  }
   if(s == "admin"){
+    admin();
     cout << "Do you want to continue?(Yes(y)/No(n)):";
     char choice;
     cin >> choice;
@@ -46,6 +53,14 @@ int main(){
     cin>>total_questions;
     cout<<"Enter Number Of Small Question"<<endl;
     cin>>small_questions;
+    cout<<"Enter Number Of Medium Questions!"<<endl;
+    cin>>medium_questions;
+    cout<<"Enter Number Of Large Questions!"<<endl;
+    cin>>large_questions;
+    if(isEqual(total_questions,small_questions,medium_questions,large_questions)){
+      cout << "if works";
+    }
+
 
   }
   return 0;
