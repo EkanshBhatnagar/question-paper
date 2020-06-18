@@ -22,8 +22,7 @@ bool isUniqueUser(string str){
 }
 
 void admin(){
-  string line;
-  ifstream myfile ("login_pass.txt");
+
 
   cout << "Welcome to the Admin Dialog!" << endl;
   cout << "This is used only for adding or deleting existing users!" << endl;
@@ -34,6 +33,8 @@ void admin(){
   string newPass;
   if(choice == 'L'){
     int count = 1;
+    string line;
+    ifstream myfile ("login_pass.txt");
     if (myfile.is_open())
     {
       while ( getline (myfile,line) )
@@ -56,6 +57,10 @@ void admin(){
     }
     cout << "Enter a new Password:";
     cin >> newPass;
+    ofstream myfile;
+    myfile.open ("login_pass.txt",ios::app);
+    myfile << newUser<< ":" << newPass<<"\n";
+    myfile.close();
 
   }
 }
