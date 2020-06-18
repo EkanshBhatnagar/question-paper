@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-void login () {
+string login () {
   string username, password;
   cout << "Login:" << endl;
   cout << "Enter your Login ID:";
@@ -39,6 +39,5 @@ void login () {
   if(!isuser){
     cout << "This user doesn't exists" << endl;
   }
-  myfile.close();
-  return;
+  return username;
 }
