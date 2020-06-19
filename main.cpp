@@ -10,12 +10,13 @@ using namespace std;
 int main(){
 
   cout << "Welcome to the Question Paper Generator CLI" << endl;
-  start:
+
   string s = login();
   if(s == "-1"){
     return 0;
   }
   if(s == "admin"){
+    start:
     admin();
     cout << "Do you want to continue?(Yes(y)/No(n)):";
     char choice;
