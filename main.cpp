@@ -42,9 +42,14 @@ int main(){
     cout<<"Oops! Standard Can Only be in between 1 to 12"<<endl;
       cout<<"Logging You Out!"<<endl;
       cout<<"Try Again Later!"<<endl;
+      return 0;
+     } 
+     else {
+       goto begin;
      }
   }
   else{
+    begin:
     int total_questions;
     int small_questions;
     int medium_questions;
@@ -58,9 +63,15 @@ int main(){
     cout<<"Enter Number Of Large Questions!"<<endl;
     cin>>large_questions;
     if(isEqual(total_questions,small_questions,medium_questions,large_questions)){
-      cout << "if works";
-    }
+      
 
+
+
+    }
+    else {
+      cout<<"Enter The Number of Questions Again " << s<<endl;
+      goto begin;
+    }
 
   }
   return 0;
