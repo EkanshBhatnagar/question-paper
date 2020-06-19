@@ -5,6 +5,7 @@
 #include <bits/stdc++.h>
 #include <algorithm>
 #include <string.h>
+#include "fromTheTxtFile.h"
 using namespace std;
 
 int main(){
@@ -63,7 +64,11 @@ int main(){
     cout<<"Enter Number Of Large Questions!"<<endl;
     cin>>large_questions;
     if(isEqual(total_questions,small_questions,medium_questions,large_questions)){
-      
+      	
+       
+     fromTheTxtFile(Standard,small_questions,medium_questions,large_questions); 
+
+
 
 
 
