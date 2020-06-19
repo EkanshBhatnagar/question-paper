@@ -58,7 +58,7 @@ int main(){
     cout<<"Enter Number Of Large Questions!"<<endl;
     cin>>large_questions;
     if(isEqual(total_questions,small_questions,medium_questions,large_questions)){
-      cout << "if works";
+
     }
 
 
