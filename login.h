@@ -5,12 +5,14 @@ using namespace std;
 
 string login () {
   string username, password;
+  std::hash <string>hash;
   cout << "Login:" << endl;
   cout << "Enter your Login ID:";
   cin >> username;
   cout << "Enter your Password:";
   cin >> password;
-
+  long unsigned int hashedPass = hash(password);
+  std::string hashedPassStr = std::to_string(hashedPass);;
   //file stuff
   /*ofstream myfile;
   myfile.open ("login_pass.txt");*/
@@ -34,7 +36,7 @@ string login () {
       int pos = line.find(":");
       if(username == line.substr(0,pos)){
         isuser = 1;
-        if(password == line.substr(pos+1)){
+        if(hashedPassStr == line.substr(pos+1)){
           cout << "Successful" << endl;
         }
         else {
