@@ -11,12 +11,13 @@ using namespace std;
 int main(){
 
   cout << "Welcome to the Question Paper Generator CLI" << endl;
-  start:
+
   string s = login();
   if(s == "-1"){
     return 0;
   }
   if(s == "admin"){
+    start:
     admin();
     cout << "Do you want to continue?(Yes(y)/No(n)):";
     char choice;
@@ -44,7 +45,7 @@ int main(){
       cout<<"Logging You Out!"<<endl;
       cout<<"Try Again Later!"<<endl;
       return 0;
-     } 
+     }
      else {
        goto begin;
      }
@@ -64,9 +65,9 @@ int main(){
     cout<<"Enter Number Of Large Questions!"<<endl;
     cin>>large_questions;
     if(isEqual(total_questions,small_questions,medium_questions,large_questions)){
-      	
-       
-     fromTheTxtFile(Standard,small_questions,medium_questions,large_questions); 
+
+
+     fromTheTxtFile(Standard,small_questions,medium_questions,large_questions);
 
 
 
