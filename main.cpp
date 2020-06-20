@@ -5,6 +5,7 @@
 #include <bits/stdc++.h>
 #include <algorithm>
 #include <string.h>
+#include "fromTheTxtFile.h"
 using namespace std;
 
 int main(){
@@ -43,9 +44,14 @@ int main(){
     cout<<"Oops! Standard Can Only be in between 1 to 12"<<endl;
       cout<<"Logging You Out!"<<endl;
       cout<<"Try Again Later!"<<endl;
+      return 0;
+     }
+     else {
+       goto begin;
      }
   }
   else{
+    begin:
     int total_questions;
     int small_questions;
     int medium_questions;
@@ -60,8 +66,18 @@ int main(){
     cin>>large_questions;
     if(isEqual(total_questions,small_questions,medium_questions,large_questions)){
 
-    }
 
+     fromTheTxtFile(Standard,small_questions,medium_questions,large_questions);
+
+
+
+
+
+    }
+    else {
+      cout<<"Enter The Number of Questions Again " << s<<endl;
+      goto begin;
+    }
 
   }
   return 0;
