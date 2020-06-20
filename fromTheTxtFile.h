@@ -7,6 +7,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include "toStringFromNum.h"
+#include "getLine.h"
 using namespace std;
 
 
@@ -37,6 +38,5 @@ void fromTheTxtFile(int Standard ,int x , int y=0 , int z=0){
         cout << char_array[i]; 
   
     list_dir(char_array);
-     cout<<"ABH AAGEY YHA ME FILE SE DATA READ KRKE COPY KA CENE CHALU KRNA HAI"<<endl;
 
 }
