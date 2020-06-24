@@ -36,11 +36,11 @@ int main(){
   cout<<"Hello "<<s<<"! Enter The Standard For Which You Want To Create Paper For! :"<<endl;
   int Standard;
   cin>>Standard;
-  if(Standard>12 ){
+  if(Standard>12 || Standard <1 ){
     cout<<"Oops! Standard Can Only be in between 1 to 12"<<endl;
     cout<<"Enter Standard Again!"<<" Do It Carefully As It Is Your Last Attempt.We Will Log You Out!"<<endl;
     cin>>Standard;
-     if(Standard>12){
+     if(Standard>12 || Standard <1 ){
     cout<<"Oops! Standard Can Only be in between 1 to 12"<<endl;
       cout<<"Logging You Out!"<<endl;
       cout<<"Try Again Later!"<<endl;
@@ -50,7 +50,7 @@ int main(){
        goto begin;
      }
   }
-  else{
+  else {
     begin:
     int total_questions;
     int small_questions;
