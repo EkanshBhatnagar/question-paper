@@ -36,7 +36,7 @@ int main(){
   cout<<"Hello "<<s<<"! Enter The Standard For Which You Want To Create Paper For! :"<<endl;
   int Standard;
   cin>>Standard;
-  if(Standard>12){
+  if(Standard>12 ){
     cout<<"Oops! Standard Can Only be in between 1 to 12"<<endl;
     cout<<"Enter Standard Again!"<<" Do It Carefully As It Is Your Last Attempt.We Will Log You Out!"<<endl;
     cin>>Standard;
@@ -69,11 +69,7 @@ int main(){
 
      fromTheTxtFile(Standard,small_questions,medium_questions,large_questions);
 
-
-
-
-
-    }
+   }
     else {
       cout<<"Enter The Number of Questions Again " << s<<endl;
       goto begin;
