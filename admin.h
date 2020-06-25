@@ -62,7 +62,7 @@ void admin(){
     std::string newHashedPassStr = std::to_string(newHashedPass);
     ofstream myfile;
     myfile.open ("login_pass.txt",ios::app);
-    myfile << newUser<< ":" << newHashedPassStr<<"\n";
+    myfile << newUser << ":" << newHashedPassStr << "\n";
     myfile.close();
 
   } else if (choice == 'D') {
