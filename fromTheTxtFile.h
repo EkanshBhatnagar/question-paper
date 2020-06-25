@@ -7,7 +7,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include "toStringFromNum.h"
-#include "getLine.h"
+#include "getThatLine.h"
 using namespace std;
 
 

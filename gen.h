@@ -40,7 +40,7 @@ void generateHTML(){
 void addQuestion(string question, int count){
   fstream outfile("output.html");
   GotoLine(outfile,13);
-  getline()
+  //getline();
   outfile << count << ". " << question  << "</body></html>"<< endl;
 
 }
