@@ -41,8 +41,9 @@ using namespace std;
        for(int i=startpos+7;i<endpos;i++){
           tmp +=line[i];
        }
-    cout <<tmp<<endl;
+    cout <<tmp;
     }
+    cout<<endl;
     o++;
     }
     }
